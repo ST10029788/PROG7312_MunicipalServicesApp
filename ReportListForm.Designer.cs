@@ -53,6 +53,7 @@
             this.Controls.Add(this.dgvReports);
             this.Name = "ReportListForm";
             this.Text = "ReportListForm";
+            this.Load += new System.EventHandler(this.ReportListForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvReports)).EndInit();
             this.ResumeLayout(false);
 

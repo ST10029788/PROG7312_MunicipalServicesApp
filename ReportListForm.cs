@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using static MunicipalServicesApp.ReportIssuesForm;
 
 namespace MunicipalServicesApp
 {
@@ -20,11 +19,11 @@ namespace MunicipalServicesApp
             InitializeComponent();
             this.issueReports = reports;
             bindingSource = new BindingSource();
+            bindingSource.DataSource = issueReports;
         }
 
         private void ReportListForm_Load(object sender, EventArgs e)
         {
-            bindingSource.DataSource = issueReports;
             dgvReports.DataSource = bindingSource;
             dgvReports.AutoGenerateColumns = true;
         }
@@ -34,6 +33,4 @@ namespace MunicipalServicesApp
 
         }
     }
-
 }
-
