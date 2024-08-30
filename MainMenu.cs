@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 namespace MunicipalServicesApp
 {
-    public partial class Form1 : Form
+    public partial class MainMenu : Form
     {
-        public Form1()
+        public MainMenu()
         {
             InitializeComponent();
         }
@@ -17,5 +17,7 @@ namespace MunicipalServicesApp
             reportIssuesForm.Show();
             this.Hide(); // Hide the main form
         }
+
+        
     }
 }

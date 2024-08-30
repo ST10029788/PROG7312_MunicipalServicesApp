@@ -1,6 +1,6 @@
 ﻿namespace MunicipalServicesApp
 {
-    partial class Form1
+    partial class MainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -35,16 +35,18 @@
             // 
             // btnReportIssues
             // 
+            this.btnReportIssues.AutoSize = true;
             this.btnReportIssues.Location = new System.Drawing.Point(12, 12);
             this.btnReportIssues.Name = "btnReportIssues";
             this.btnReportIssues.Size = new System.Drawing.Size(776, 132);
             this.btnReportIssues.TabIndex = 0;
             this.btnReportIssues.Text = "Report Issues";
             this.btnReportIssues.UseVisualStyleBackColor = true;
-            this.btnReportIssues.Click += new System.EventHandler(this.button1_Click);
+            this.btnReportIssues.Click += new System.EventHandler(this.btnReportIssues_Click);
             // 
             // btnLocalEvents
             // 
+            this.btnLocalEvents.AutoSize = true;
             this.btnLocalEvents.Enabled = false;
             this.btnLocalEvents.Location = new System.Drawing.Point(12, 159);
             this.btnLocalEvents.Name = "btnLocalEvents";
@@ -55,6 +57,7 @@
             // 
             // btnServiceRequestStatus
             // 
+            this.btnServiceRequestStatus.AutoSize = true;
             this.btnServiceRequestStatus.Enabled = false;
             this.btnServiceRequestStatus.Location = new System.Drawing.Point(12, 306);
             this.btnServiceRequestStatus.Name = "btnServiceRequestStatus";
@@ -62,9 +65,8 @@
             this.btnServiceRequestStatus.TabIndex = 2;
             this.btnServiceRequestStatus.Text = "Service Request Status";
             this.btnServiceRequestStatus.UseVisualStyleBackColor = true;
-            this.btnServiceRequestStatus.Click += new System.EventHandler(this.button3_Click);
             // 
-            // Form1
+            // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -72,9 +74,10 @@
             this.Controls.Add(this.btnServiceRequestStatus);
             this.Controls.Add(this.btnLocalEvents);
             this.Controls.Add(this.btnReportIssues);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainMenu";
+            this.Text = "MainMenu";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

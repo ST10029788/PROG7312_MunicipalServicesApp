@@ -44,11 +44,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="IssueReport.cs" />
+    <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportDetailsForm.Designer.cs">
+      <DependentUpon>ReportDetailsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportIssuesForm.cs">
       <SubType>Form</SubType>
@@ -58,8 +65,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ReportListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportListForm.Designer.cs">
+      <DependentUpon>ReportListForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -70,8 +83,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReportDetailsForm.resx">
+      <DependentUpon>ReportDetailsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReportIssuesForm.resx">
       <DependentUpon>ReportIssuesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportListForm.resx">
+      <DependentUpon>ReportListForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

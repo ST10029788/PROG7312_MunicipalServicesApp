@@ -38,6 +38,7 @@
             this.btnSubmit = new System.Windows.Forms.Button();
             this.progressBarEngagement = new System.Windows.Forms.ProgressBar();
             this.btnBack = new System.Windows.Forms.Button();
+            this.btnShowReportList = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtLocation
@@ -47,7 +48,6 @@
             this.txtLocation.Size = new System.Drawing.Size(643, 35);
             this.txtLocation.TabIndex = 0;
             this.txtLocation.Text = "";
-            this.txtLocation.TextChanged += new System.EventHandler(this.txtLocation_TextChanged);
             // 
             // labelLocation
             // 
@@ -78,7 +78,7 @@
             "Environmental Hazards",
             "Abandoned Vehicles",
             "Flooding "});
-            this.cmbCategory.Location = new System.Drawing.Point(145, 107);
+            this.cmbCategory.Location = new System.Drawing.Point(145, 84);
             this.cmbCategory.Name = "cmbCategory";
             this.cmbCategory.Size = new System.Drawing.Size(643, 28);
             this.cmbCategory.TabIndex = 2;
@@ -87,7 +87,7 @@
             // labelCategory
             // 
             this.labelCategory.AutoSize = true;
-            this.labelCategory.Location = new System.Drawing.Point(39, 107);
+            this.labelCategory.Location = new System.Drawing.Point(39, 72);
             this.labelCategory.Name = "labelCategory";
             this.labelCategory.Size = new System.Drawing.Size(77, 20);
             this.labelCategory.TabIndex = 3;
@@ -96,17 +96,16 @@
             // 
             // rtbDescription
             // 
-            this.rtbDescription.Location = new System.Drawing.Point(145, 202);
+            this.rtbDescription.Location = new System.Drawing.Point(145, 133);
             this.rtbDescription.Name = "rtbDescription";
             this.rtbDescription.Size = new System.Drawing.Size(643, 84);
             this.rtbDescription.TabIndex = 4;
             this.rtbDescription.Text = "";
-            this.rtbDescription.TextChanged += new System.EventHandler(this.rtbDescription_TextChanged);
             // 
             // labelDescription
             // 
             this.labelDescription.AutoSize = true;
-            this.labelDescription.Location = new System.Drawing.Point(39, 202);
+            this.labelDescription.Location = new System.Drawing.Point(39, 121);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(93, 20);
             this.labelDescription.TabIndex = 5;
@@ -114,7 +113,7 @@
             // 
             // btnAttachMedia
             // 
-            this.btnAttachMedia.Location = new System.Drawing.Point(145, 310);
+            this.btnAttachMedia.Location = new System.Drawing.Point(145, 223);
             this.btnAttachMedia.Name = "btnAttachMedia";
             this.btnAttachMedia.Size = new System.Drawing.Size(643, 44);
             this.btnAttachMedia.TabIndex = 6;
@@ -124,7 +123,7 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(145, 360);
+            this.btnSubmit.Location = new System.Drawing.Point(145, 273);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(302, 44);
             this.btnSubmit.TabIndex = 7;
@@ -135,15 +134,14 @@
             // progressBarEngagement
             // 
             this.progressBarEngagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.progressBarEngagement.Location = new System.Drawing.Point(43, 415);
+            this.progressBarEngagement.Location = new System.Drawing.Point(43, 323);
             this.progressBarEngagement.Name = "progressBarEngagement";
             this.progressBarEngagement.Size = new System.Drawing.Size(745, 23);
             this.progressBarEngagement.TabIndex = 8;
-            this.progressBarEngagement.Click += new System.EventHandler(this.progressBarEngagement_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(453, 360);
+            this.btnBack.Location = new System.Drawing.Point(453, 273);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(335, 44);
             this.btnBack.TabIndex = 10;
@@ -151,12 +149,25 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // btnShowReportList
+            // 
+            this.btnShowReportList.AutoSize = true;
+            this.btnShowReportList.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnShowReportList.Location = new System.Drawing.Point(0, 406);
+            this.btnShowReportList.Name = "btnShowReportList";
+            this.btnShowReportList.Size = new System.Drawing.Size(800, 44);
+            this.btnShowReportList.TabIndex = 11;
+            this.btnShowReportList.Text = "Show Report List";
+            this.btnShowReportList.UseVisualStyleBackColor = true;
+            this.btnShowReportList.Click += new System.EventHandler(this.btnShowReportList_Click);
+            // 
             // ReportIssuesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnShowReportList);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.progressBarEngagement);
             this.Controls.Add(this.btnSubmit);
@@ -187,5 +198,6 @@
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.ProgressBar progressBarEngagement;
         private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnShowReportList;
     }
 }
