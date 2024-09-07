@@ -17,12 +17,12 @@ namespace MunicipalServicesApp
         {
             // Initialize form elements 
             cmbCategory.SelectedIndex = -1; // No selection
-            txtLocation.Clear(); // Clear any existing text
-            rtbDescription.Clear(); // Clear any existing text
+            txtLocation.Clear(); // Clear any existing text i box
+            rtbDescription.Clear(); // Clear any existing text in box
 
             // Initialize ProgressBar
             progressBarEngagement.Minimum = 0;
-            progressBarEngagement.Maximum = 100; // Adjust according to your progress logic
+            progressBarEngagement.Maximum = 100; // progress logic
             progressBarEngagement.Value = 0;
         }
 
@@ -50,7 +50,7 @@ namespace MunicipalServicesApp
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (ValidateForm()) // Optionally validate the form before submission
+            if (ValidateForm()) //Validate the form before submission
             {
                 // Create a new issue report and add it to the list
                 IssueReport newReport = new IssueReport
@@ -63,10 +63,10 @@ namespace MunicipalServicesApp
 
                 issueReports.Add(newReport);
 
-                // Example: Save the report to a database or send it to a server
+                // Save the report to a database or send it to a server later in development
                 MessageBox.Show("Issue reported successfully!", "Submission Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                // Reset the form fields (if needed)
+                // Reset the form fields
                 ResetFormFields();
 
                 // Reset the ProgressBar after submission
@@ -85,7 +85,7 @@ namespace MunicipalServicesApp
             this.Close();
         }
 
-        private void UpdateProgressBar(int increment)
+        private void UpdateProgressBar(int increment) //updating progress bar as information is entered
         {
             if (progressBarEngagement.Value + increment <= progressBarEngagement.Maximum)
             {
@@ -103,7 +103,7 @@ namespace MunicipalServicesApp
             txtLocation.Clear();
             cmbCategory.SelectedIndex = -1; // Deselects any selected category
             rtbDescription.Clear();
-            // Optionally reset any other fields
+           
         }
 
         private bool ValidateForm()
@@ -113,7 +113,7 @@ namespace MunicipalServicesApp
                      string.IsNullOrWhiteSpace(rtbDescription.Text));
         }
 
-        // Define a class to represent an issue report
+        //represent an issue report
       
 
         private void btnShowReportList_Click(object sender, EventArgs e)
@@ -123,6 +123,21 @@ namespace MunicipalServicesApp
         }
 
         private void labelCategory_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void progressBarEngagement_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rtbDescription_TextChanged(object sender, EventArgs e)
         {
 
         }

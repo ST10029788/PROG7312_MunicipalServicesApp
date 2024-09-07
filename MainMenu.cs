@@ -18,6 +18,24 @@ namespace MunicipalServicesApp
             this.Hide(); // Hide the main form
         }
 
-        
+        private void btnLocalEvents_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnServiceRequestStatus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
