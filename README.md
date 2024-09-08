@@ -20,12 +20,19 @@ Service Request Status: Placeholder option for future implementation.
 **Report Issues Page:**
 
 Location Input: Textbox for users to enter the location of the reported issue.
+
 Category Selection: Dropdown or list for users to select the category of the issue (e.g., sanitation, roads, utilities).
+
 Description Box: RichTextBox for users to provide a detailed description of the issue.
+
 Media Attachment: Button to open a file dialog and attach images or documents related to the issue.
+
 Submit Button: Button to finalize and submit the issue report.
+
 Engagement Feature: Dynamic feature such as a label displaying encouraging messages or a ProgressBar indicating reporting progress.
+
 Navigation Buttons: Buttons for users to return to the main menu or navigate between sections.
+
 
 ## Installation
 ### Prerequisites
