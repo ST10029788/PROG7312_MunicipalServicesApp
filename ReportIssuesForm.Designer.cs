@@ -56,10 +56,11 @@
             // labelLocation
             // 
             this.labelLocation.AutoSize = true;
+            this.labelLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLocation.ForeColor = System.Drawing.Color.DarkRed;
             this.labelLocation.Location = new System.Drawing.Point(3, 0);
             this.labelLocation.Name = "labelLocation";
-            this.labelLocation.Size = new System.Drawing.Size(74, 20);
+            this.labelLocation.Size = new System.Drawing.Size(83, 20);
             this.labelLocation.TabIndex = 1;
             this.labelLocation.Text = "Location:";
             // 
@@ -92,10 +93,11 @@
             // labelCategory
             // 
             this.labelCategory.AutoSize = true;
+            this.labelCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategory.ForeColor = System.Drawing.Color.DarkRed;
             this.labelCategory.Location = new System.Drawing.Point(3, 35);
             this.labelCategory.Name = "labelCategory";
-            this.labelCategory.Size = new System.Drawing.Size(77, 20);
+            this.labelCategory.Size = new System.Drawing.Size(86, 20);
             this.labelCategory.TabIndex = 3;
             this.labelCategory.Text = "Category:";
             this.labelCategory.Click += new System.EventHandler(this.labelCategory_Click);
@@ -112,10 +114,11 @@
             // labelDescription
             // 
             this.labelDescription.AutoSize = true;
+            this.labelDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescription.ForeColor = System.Drawing.Color.DarkRed;
             this.labelDescription.Location = new System.Drawing.Point(3, 70);
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(93, 20);
+            this.labelDescription.Size = new System.Drawing.Size(105, 20);
             this.labelDescription.TabIndex = 5;
             this.labelDescription.Text = "Description:";
             // 
@@ -149,7 +152,7 @@
             this.progressBarEngagement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.progressBarEngagement.Location = new System.Drawing.Point(0, 0);
             this.progressBarEngagement.Name = "progressBarEngagement";
-            this.progressBarEngagement.Size = new System.Drawing.Size(800, 19);
+            this.progressBarEngagement.Size = new System.Drawing.Size(800, 25);
             this.progressBarEngagement.TabIndex = 8;
             this.progressBarEngagement.Click += new System.EventHandler(this.progressBarEngagement_Click);
             // 
@@ -191,7 +194,7 @@
             this.tableLayoutPanel1.Controls.Add(this.labelDescription, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.rtbDescription, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 19);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 25);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
@@ -213,7 +216,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btnAttachMedia, 0, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 144);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 150);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));

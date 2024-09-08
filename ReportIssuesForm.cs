@@ -26,9 +26,60 @@ namespace MunicipalServicesApp
             progressBarEngagement.Value = 0;
         }
 
+        private void txtLocation_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtLocation.Text))
+            {
+                UpdateProgressBar(10); // 10% progress for entering location
+            }
+            else
+            {
+                // If the text is cleared, decrement the progress bar value
+                UpdateProgressBar(-10);
+            }
+        }
+
+        private void rtbDescription_TextChanged(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(rtbDescription.Text))
+            {
+                UpdateProgressBar(30); // 30% progress for entering description
+            }
+            else
+            {
+                // If the text is cleared, decrement the progress bar value
+                UpdateProgressBar(-30);
+            }
+        }
+
         private void cmbCategory_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateProgressBar(20); // 20% progress for selecting a category
+        }
+
+        private bool ValidateForm()
+        {
+            bool isValid = true;
+
+            if (string.IsNullOrWhiteSpace(txtLocation.Text))
+            {
+                MessageBox.Show("Please enter a valid location.", "Invalid Location", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                isValid = false;
+            }
+
+            if (cmbCategory.SelectedIndex == -1)
+            {
+                MessageBox.Show("Please select a category.", "No Category Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                isValid = false;
+            }
+
+            if (string.IsNullOrWhiteSpace(rtbDescription.Text))
+            {
+                MessageBox.Show("Please enter a description.", "No Description", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                isValid = false;
+            }
+
+            return isValid;
         }
 
         private void btnAttachMedia_Click(object sender, EventArgs e)
@@ -42,7 +93,14 @@ namespace MunicipalServicesApp
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 string filePath = openFileDialog.FileName;
-                // Handle the file attachment (e.g., save path, display confirmation)
+
+                if (string.IsNullOrWhiteSpace(filePath) || filePath.Length > 255)
+                {
+                    MessageBox.Show("Invalid file path or file too large.", "Invalid File", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // Handle the file attachment display confirmation
                 MessageBox.Show("File attached: " + filePath);
                 UpdateProgressBar(20); // 20% progress for attaching a media file
             }
@@ -52,25 +110,42 @@ namespace MunicipalServicesApp
         {
             if (ValidateForm()) //Validate the form before submission
             {
-                // Create a new issue report and add it to the list
-                IssueReport newReport = new IssueReport
+                try
                 {
-                    Location = txtLocation.Text,
-                    Category = cmbCategory.SelectedItem.ToString(),
-                    Description = rtbDescription.Text,
-                    // Optionally include other fields like media paths
-                };
+                    // Create a new issue report and add it to the list
+                    IssueReport newReport = new IssueReport
+                    {
+                        Location = txtLocation.Text,
+                        Category = cmbCategory.SelectedItem.ToString(),
+                        Description = rtbDescription.Text,
+                        // Optionally include other fields like media paths
+                    };
 
-                issueReports.Add(newReport);
+                    issueReports.Add(newReport);
 
-                // Save the report to a database or send it to a server later in development
-                MessageBox.Show("Issue reported successfully!", "Submission Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Save the report to a database or send it to a server later in development
+                    // Display confirmation message
 
-                // Reset the form fields
-                ResetFormFields();
+                    MessageBox.Show("Thank you for submitting your issue report! We'll review it and get back to you soon.", "Submission Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    DialogResult response = MessageBox.Show("Would you like to provide feedback about the reporting process?", "Submission Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-                // Reset the ProgressBar after submission
-                ResetProgressBar();
+                    if (response == DialogResult.Yes)
+                    {
+                        // Display feedback form
+                        FeedbackForm feedbackForm = new FeedbackForm();
+                        feedbackForm.ShowDialog();
+                    }
+
+                    // Reset the form fields
+                    ResetFormFields();
+
+                    // Reset the ProgressBar after submission
+                    ResetProgressBar();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while submitting the report: " + ex.Message, "Submission Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
@@ -85,13 +160,19 @@ namespace MunicipalServicesApp
             this.Close();
         }
 
-        private void UpdateProgressBar(int increment) //updating progress bar as information is entered
+        private void UpdateProgressBar(int increment)
         {
-            if (progressBarEngagement.Value + increment <= progressBarEngagement.Maximum)
+            int newValue = progressBarEngagement.Value + increment;
+            if (newValue <= progressBarEngagement.Maximum && newValue >= progressBarEngagement.Minimum)
             {
-                progressBarEngagement.Value += increment;
+                progressBarEngagement.Value = newValue;
+            }
+            else if (newValue > progressBarEngagement.Maximum)
+            {
+                progressBarEngagement.Value = progressBarEngagement.Maximum;
             }
         }
+
 
         private void ResetProgressBar()
         {
@@ -106,14 +187,9 @@ namespace MunicipalServicesApp
            
         }
 
-        private bool ValidateForm()
-        {
-            return !(string.IsNullOrWhiteSpace(txtLocation.Text) ||
-                     cmbCategory.SelectedIndex == -1 ||
-                     string.IsNullOrWhiteSpace(rtbDescription.Text));
-        }
+      
 
-        //represent an issue report
+  
       
 
         private void btnShowReportList_Click(object sender, EventArgs e)
@@ -133,11 +209,6 @@ namespace MunicipalServicesApp
         }
 
         private void progressBarEngagement_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void rtbDescription_TextChanged(object sender, EventArgs e)
         {
 
         }

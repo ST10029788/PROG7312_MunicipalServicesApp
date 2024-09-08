@@ -44,6 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FeedbackForm.cs" />
+    <Compile Include="FeedbackForm.Designer.cs">
+      <DependentUpon>FeedbackForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="IssueReport.cs" />
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
@@ -71,6 +75,9 @@
     <Compile Include="ReportListForm.Designer.cs">
       <DependentUpon>ReportListForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FeedbackForm.resx">
+      <DependentUpon>FeedbackForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
