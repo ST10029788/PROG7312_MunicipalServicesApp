@@ -47,6 +47,7 @@
             // 
             // txtLocation
             // 
+            this.txtLocation.Dock = System.Windows.Forms.DockStyle.Fill;
             this.txtLocation.Location = new System.Drawing.Point(274, 3);
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.Size = new System.Drawing.Size(523, 29);
@@ -66,6 +67,7 @@
             // 
             // cmbCategory
             // 
+            this.cmbCategory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbCategory.FormattingEnabled = true;
             this.cmbCategory.Items.AddRange(new object[] {
             "Other",
@@ -104,9 +106,10 @@
             // 
             // rtbDescription
             // 
-            this.rtbDescription.Location = new System.Drawing.Point(274, 73);
+            this.rtbDescription.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbDescription.Location = new System.Drawing.Point(274, 72);
             this.rtbDescription.Name = "rtbDescription";
-            this.rtbDescription.Size = new System.Drawing.Size(523, 49);
+            this.rtbDescription.Size = new System.Drawing.Size(523, 350);
             this.rtbDescription.TabIndex = 4;
             this.rtbDescription.Text = "";
             this.rtbDescription.TextChanged += new System.EventHandler(this.rtbDescription_TextChanged);
@@ -116,7 +119,7 @@
             this.labelDescription.AutoSize = true;
             this.labelDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDescription.ForeColor = System.Drawing.Color.DarkRed;
-            this.labelDescription.Location = new System.Drawing.Point(3, 70);
+            this.labelDescription.Location = new System.Drawing.Point(3, 69);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(105, 20);
             this.labelDescription.TabIndex = 5;
@@ -124,11 +127,14 @@
             // 
             // btnAttachMedia
             // 
+            this.btnAttachMedia.AutoSize = true;
+            this.btnAttachMedia.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnAttachMedia.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnAttachMedia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAttachMedia.ForeColor = System.Drawing.Color.DarkRed;
             this.btnAttachMedia.Location = new System.Drawing.Point(3, 3);
             this.btnAttachMedia.Name = "btnAttachMedia";
-            this.btnAttachMedia.Size = new System.Drawing.Size(394, 44);
+            this.btnAttachMedia.Size = new System.Drawing.Size(394, 42);
             this.btnAttachMedia.TabIndex = 6;
             this.btnAttachMedia.Text = "Attach Media";
             this.btnAttachMedia.UseVisualStyleBackColor = true;
@@ -136,11 +142,16 @@
             // 
             // btnSubmit
             // 
+            this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSubmit.AutoSize = true;
+            this.btnSubmit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnSubmit.Location = new System.Drawing.Point(403, 3);
+            this.btnSubmit.Location = new System.Drawing.Point(403, 51);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(394, 44);
+            this.btnSubmit.Size = new System.Drawing.Size(394, 42);
             this.btnSubmit.TabIndex = 7;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -158,11 +169,16 @@
             // 
             // btnBack
             // 
+            this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnBack.AutoSize = true;
+            this.btnBack.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnBack.Location = new System.Drawing.Point(3, 53);
+            this.btnBack.Location = new System.Drawing.Point(3, 51);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(394, 44);
+            this.btnBack.Size = new System.Drawing.Size(394, 42);
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "Back to Main Menu";
             this.btnBack.UseVisualStyleBackColor = true;
@@ -170,12 +186,16 @@
             // 
             // btnShowReportList
             // 
+            this.btnShowReportList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnShowReportList.AutoSize = true;
+            this.btnShowReportList.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.btnShowReportList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowReportList.ForeColor = System.Drawing.Color.DarkRed;
-            this.btnShowReportList.Location = new System.Drawing.Point(403, 53);
+            this.btnShowReportList.Location = new System.Drawing.Point(403, 3);
             this.btnShowReportList.Name = "btnShowReportList";
-            this.btnShowReportList.Size = new System.Drawing.Size(394, 44);
+            this.btnShowReportList.Size = new System.Drawing.Size(394, 42);
             this.btnShowReportList.TabIndex = 11;
             this.btnShowReportList.Text = "Show Report List";
             this.btnShowReportList.UseVisualStyleBackColor = true;
@@ -184,23 +204,24 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.AutoSize = true;
+            this.tableLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.96227F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.03773F));
             this.tableLayoutPanel1.Controls.Add(this.labelLocation, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.txtLocation, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.labelCategory, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.rtbDescription, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.cmbCategory, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelDescription, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.rtbDescription, 1, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 25);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 125);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 425);
             this.tableLayoutPanel1.TabIndex = 12;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -210,18 +231,18 @@
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.btnShowReportList, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.btnBack, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.btnSubmit, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.btnAttachMedia, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel2.Controls.Add(this.btnShowReportList, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnSubmit, 1, 1);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel2.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 150);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 354);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(800, 100);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(800, 96);
             this.tableLayoutPanel2.TabIndex = 13;
             // 
             // ReportIssuesForm

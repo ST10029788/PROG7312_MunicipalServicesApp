@@ -35,13 +35,16 @@
             // dgvReports
             // 
             this.dgvReports.AllowUserToAddRows = false;
+            this.dgvReports.AllowUserToDeleteRows = false;
             this.dgvReports.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReports.Location = new System.Drawing.Point(12, 12);
+            this.dgvReports.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvReports.GridColor = System.Drawing.Color.IndianRed;
+            this.dgvReports.Location = new System.Drawing.Point(0, 0);
             this.dgvReports.Name = "dgvReports";
             this.dgvReports.ReadOnly = true;
             this.dgvReports.RowHeadersWidth = 62;
             this.dgvReports.RowTemplate.Height = 28;
-            this.dgvReports.Size = new System.Drawing.Size(776, 426);
+            this.dgvReports.Size = new System.Drawing.Size(800, 450);
             this.dgvReports.TabIndex = 0;
             this.dgvReports.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReports_CellContentClick);
             // 

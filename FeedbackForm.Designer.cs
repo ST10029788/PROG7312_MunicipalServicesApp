@@ -178,7 +178,7 @@
             0,
             0,
             0});
-            this.numericUpDownSatisfaction.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.numericUpDownSatisfaction.ValueChanged += new System.EventHandler(this.numericUpDownSatisfaction_ValueChanged);
             // 
             // comboBoxHelpful
             // 
