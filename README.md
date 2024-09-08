@@ -14,8 +14,11 @@ The Municipal Services Application is a C# .NET Framework software designed to e
 **Main Menu:**
 
 Report Issues: This option allows users to report municipal issues.
+
 Local Events and Announcements: Placeholder option for future implementation.
+
 Service Request Status: Placeholder option for future implementation.
+
 
 **Report Issues Page:**
 
