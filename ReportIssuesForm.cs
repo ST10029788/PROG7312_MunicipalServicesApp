@@ -15,6 +15,9 @@ namespace MunicipalServicesApp
 
         private void ReportIssuesForm_Load(object sender, EventArgs e)
         {
+            //method adapted from StackOverflow
+            //Khan, T. (2024). How to clear or regenerate window form after submitting using c#? [online] Stack Overflow. Available at: https://stackoverflow.com/questions/6094693/how-to-clear-or-regenerate-window-form-after-submitting-using-c [Accessed 11 Sep. 2024].
+            //https://stackoverflow.com/users/742934/touseef-khan
             // Initialize form elements 
             cmbCategory.SelectedIndex = -1; // No selection
             txtLocation.Clear(); // Clear any existing text i box
@@ -28,6 +31,9 @@ namespace MunicipalServicesApp
 
         private void txtLocation_TextChanged(object sender, EventArgs e)
         {
+            //method adapted from StackOverflow 
+            //Asieh hojatoleslami (2024). Difference between IsNullOrEmpty and IsNullOrWhiteSpace in C#. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/18710644/difference-between-isnullorempty-and-isnullorwhitespace-in-c-sharp [Accessed 8 Sep. 2024].
+            //https://stackoverflow.com/users/2745247/asieh-hojatoleslami
             if (!string.IsNullOrWhiteSpace(txtLocation.Text))
             {
                 UpdateProgressBar(10); // 10% progress for entering location
@@ -41,6 +47,9 @@ namespace MunicipalServicesApp
 
         private void rtbDescription_TextChanged(object sender, EventArgs e)
         {
+        //method adapted from StackOverflow 
+        //Asieh hojatoleslami (2024). Difference between IsNullOrEmpty and IsNullOrWhiteSpace in C#. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/18710644/difference-between-isnullorempty-and-isnullorwhitespace-in-c-sharp [Accessed 8 Sep. 2024].
+        //https://stackoverflow.com/users/2745247/asieh-hojatoleslami
             if (!string.IsNullOrWhiteSpace(rtbDescription.Text))
             {
                 UpdateProgressBar(30); // 30% progress for entering description
@@ -60,12 +69,18 @@ namespace MunicipalServicesApp
         private bool ValidateForm()
         {
             bool isValid = true;
+            //method adapted from StackOverflow 
+            //Asieh hojatoleslami (2024). Difference between IsNullOrEmpty and IsNullOrWhiteSpace in C#. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/18710644/difference-between-isnullorempty-and-isnullorwhitespace-in-c-sharp [Accessed 8 Sep. 2024].
+            //https://stackoverflow.com/users/2745247/asieh-hojatoleslami
 
             if (string.IsNullOrWhiteSpace(txtLocation.Text))
             {
                 MessageBox.Show("Please enter a valid location.", "Invalid Location", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 isValid = false;
             }
+        //method adapted from stackoverflow
+        //DavidWaldo (2024). C# Combobox Selected.Index = -1 not working. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/47222611/c-sharp-combobox-selected-index-1-not-working [Accessed 9 Sep. 2024].
+        //https://stackoverflow.com/users/8181646/davidwaldo
 
             if (cmbCategory.SelectedIndex == -1)
             {
@@ -84,6 +99,8 @@ namespace MunicipalServicesApp
 
         private void btnAttachMedia_Click(object sender, EventArgs e)
         {
+            //method taken from dotnet-bot (2024). OpenFileDialog Class (System.Windows.Forms). [online] Microsoft.com. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.openfiledialog?view=windowsdesktop-8.0 [Accessed 11 Sep. 2024].
+            //Microsoft
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
                 Filter = "Image Files|*.jpg;*.jpeg;*.png|Document Files|*.pdf;*.docx|All Files|*.*",
@@ -159,6 +176,9 @@ namespace MunicipalServicesApp
             mainForm.Show();
             this.Close();
         }
+
+        //method adapted from dotnet-bot (2024). ProgressBar.Increment(Int32) Method (System.Windows.Forms). [online] Microsoft.com. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.progressbar.increment?view=windowsdesktop-8.0 [Accessed 9 Sep. 2024].
+        //Microsoft
 
         private void UpdateProgressBar(int increment)
         {

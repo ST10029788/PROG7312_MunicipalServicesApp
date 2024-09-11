@@ -21,7 +21,9 @@ namespace MunicipalServicesApp
     public partial class FeedbackForm : Form
     {
         private List<Feedback> feedbackList = new List<Feedback>();
-
+        //method adapted from Stack Overflow
+        //grey, nunsy (2024). Empty textBox (null; string.IsNullOrEmpty) Issue in TextChanged. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/19933230/empty-textbox-null-string-isnullorempty-issue-in-textchanged [Accessed 9 Sep. 2024].
+        //https://stackoverflow.com/users/2796004/nunsy-grey
         private void btnSubmitFeedback_Click(object sender, EventArgs e)
         {
             // Validate feedback data
@@ -40,6 +42,9 @@ namespace MunicipalServicesApp
                 LikedLeast = textBoxLikeLeast.Text,
                 Suggestions = textBoxSuggestions.Text,
 
+                //method adapted from StackOverflow
+                //Roshan (2024). How to get the selected item of a combo box to a string variable in c#. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/15186093/how-to-get-the-selected-item-of-a-combo-box-to-a-string-variable-in-c-sharp [Accessed 11 Sep. 2024].
+                //https://stackoverflow.com/users/2091805/roshan
                 //checks if the selected item is "Yes", sets to true. If the selected item is "No", it sets the property to false.
                 ClearAndConcise = comboBoxClear.SelectedItem.ToString() == "Yes",
                 HelpfulFields = comboBoxHelpful.SelectedItem.ToString() == "Yes"

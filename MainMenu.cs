@@ -12,6 +12,9 @@ namespace MunicipalServicesApp
 
         private void btnReportIssues_Click(object sender, EventArgs e)
         {
+            //method adapted from StackOverflow
+            //SaphuA (2024). Hide main form C# on autorun. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/5022414/hide-main-form-c-sharp-on-autorun [Accessed 9 Sep. 2024].
+            //https://stackoverflow.com/users/314447/saphua
             // Open the Report Issues form
             ReportIssuesForm reportIssuesForm = new ReportIssuesForm();
             reportIssuesForm.Show();

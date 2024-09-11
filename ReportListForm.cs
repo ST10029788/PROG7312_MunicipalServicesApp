@@ -15,6 +15,9 @@ namespace MunicipalServicesApp
         private BindingSource bindingSource;
 
         public ReportListForm(List<IssueReport> reports)
+        //method adapted from Clare, J. (2024). Updating of BindingSource in WinForms does not update Datasource Collection. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/14571451/updating-of-bindingsource-in-winforms-does-not-update-datasource-collection [Accessed 11 Sep. 2024].
+        //Jeff Clare
+        //https://stackoverflow.com/users/2019580/jeff-clare
         {
             InitializeComponent();
             this.issueReports = reports;
