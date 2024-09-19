@@ -3,21 +3,28 @@
 
 1. [Introduction](#introduction)
 2. [Features](#features)
+   - 2.1 Report Issues Page
+   - 2.2 Local Events and Announcements (Future Feature)
+   - 2.3 Service Request Status (Future Feature)
 3. [Installation](#installation)
+   - 3.1 Prerequisites
+   - 3.2 Step-by-Step Installation Instructions
 4. [Usage](#usage)
-
+   - 4.1 Main Menu Overview
+   - 4.2 Reporting an Issue
+   - 4.3 Engagement Features
+   - 4.4 Navigation
 ## Introduction
-The Municipal Services Application is a C# .NET Framework software designed to enhance municipal service delivery in South Africa. This application allows residents to report issues, access local events and announcements, and track service requests. This document provides detailed instructions on how to compile, run, and use the application.
+The Municipal Services Application is a C# .NET Framework software designed to enhance municipal service delivery in South Africa. This application allows residents to report issues, access local events and announcements, and track service requests. This document provides detailed instructions on how to compile, run, and use the application.  This guide will help you set up and use the app, even if you're new to computers.
+
 
 ## Features
 ### Part 1: Report Issues Page
 **Main Menu:**
-
-Report Issues: This option allows users to report municipal issues.
-
-Local Events and Announcements: Placeholder option for future implementation.
-
-Service Request Status: Placeholder option for future implementation.
+- **Main Menu Options:**
+  - **Report Issues:** Report problems like broken streetlights or potholes.
+  - **Local Events and Announcements:** Future feature for community news and events.
+  - **Service Request Status:** Future feature to check the status of your reports.
 
 
 **Report Issues Page:**
@@ -40,13 +47,53 @@ Navigation Buttons: Buttons for users to return to the main menu or navigate bet
 ## Installation
 ### Prerequisites
 Before compiling and running the application, ensure you have the following software installed:
+- **A Computer:** Running Windows.
+- **Microsoft Visual Studio:** 2019 or later. (you can download the free Community version).
+- ## Downloading Visual Studio
 
-Microsoft Visual Studio (2019 or later) with the .NET Framework.
-.NET Framework (version 4.8 or later).
+To get started with Visual Studio, follow these steps:
+
+1. **Visit the Visual Studio Website**:
+   - Go to [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/).
+
+2. **Choose Your Edition**:
+   - Select the edition that best suits your needs:
+     - **Community**: Free for individual developers, open-source projects, academic use, and small professional teams.
+     - **Professional**: Paid edition with additional features for professional developers.
+     - **Enterprise**: Advanced tools and services for large teams and enterprises.
+
+3. **Download the Installer**:
+   - Click on the "Download" button for your chosen edition. This will download the Visual Studio Installer to your computer.
+
+4. **Run the Installer**:
+   - Open the downloaded installer and follow the prompts to install Visual Studio.
+
+5. **Select Workloads**:
+   - During installation, you can choose specific workloads (like ASP.NET, Desktop Development, etc.) based on the type of development you plan to do.
+
+6. **Complete the Installation**:
+   - Once you’ve selected the workloads, click "Install." The installer will download the necessary components and complete the setup.
+
+7. **Launch Visual Studio**:
+   - After installation, launch Visual Studio from your Start menu or desktop shortcut.
+
+For additional information and detailed guides, visit the [Visual Studio Documentation](https://docs.microsoft.com/en-us/visualstudio/).
+
+- **.NET Framework:** Version 4.8 or later. (this usually comes with Visual Studio).
+
+
 Compilation Instructions
-Download the Source Code: Ensure you have downloaded the source code for the application from the provided repository or file location.
-Find code at: https://github.com/ST10029788/PROG7312_MunicipalServicesApp.git
-Alternatively, you can download it as a zip, unzip the file and click on the .sln file which will open up on visual studio.
+1. **Download the Source Code:** Ensure you have downloaded the source code for the application from the provided repository:
+   - [GitHub Repository](https://github.com/ST10029788/PROG7312_MunicipalServicesApp.git)
+   - Alternatively, you can download it as a zip file, unzip it, and open the .sln file in Visual Studio.
+  
+2. **Open the Solution:**
+   - Launch Microsoft Visual Studio.
+   - Open the .sln file from the source code directory.
+
+3. **Build the Solution:**
+   - Select **Build** from the top menu and click **Build Solution** (or press `Ctrl+Shift+B`).
+   - Ensure there are no build errors. If errors occur, review the error list and resolve any issues.
 
 **Open the Solution:**
 
