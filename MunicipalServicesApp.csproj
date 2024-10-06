@@ -49,10 +49,10 @@
       <DependentUpon>FeedbackForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportIssues\IssueReport.cs" />
-    <Compile Include="MainMenu.cs">
+    <Compile Include="Main Menu\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
+    <Compile Include="Main Menu\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="ReportIssues\ReportDetailsForm.cs">
@@ -78,7 +78,7 @@
     <EmbeddedResource Include="ReportIssues\FeedbackForm.resx">
       <DependentUpon>FeedbackForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
+    <EmbeddedResource Include="Main Menu\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
