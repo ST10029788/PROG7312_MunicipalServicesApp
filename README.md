@@ -57,53 +57,6 @@ Event Recommendations: The app suggests events based on user search history, hel
 
 User-Friendly Interface: Events are displayed in a clear format in a `RichTextBox`, making it easy for users to read event details.
   
-## Usage
-
-1. **Loading Events**: Upon opening the form, a predefined set of sample events is loaded for demonstration purposes.
-   
-2. **Searching Events**:
-   - Enter a search term in the text box provided.
-   - Select a category from the dropdown menu (e.g., "Cultural", "Sports", "All").
-   - Specify a date range using the date pickers.
-   - Click the **Search** button to filter events based on your criteria.
-
-3. **Viewing Results**:
-   - The matching events will be displayed in the `RichTextBox` with their title, category, date, and description.
-   - If no events match the search criteria, a message will indicate that no events were found.
-
-4. **Recommendations**:
-   - After each search, the app provides event recommendations based on previously searched terms.
-   - Recommended events will appear below the search results.
-
-5. **Navigating Back**:
-   - Click the **Back to Main Menu** button to close the form and return to the main application menu.
-
-## Data Structure
-
-- **SortedDictionary<DateTime, Queue<Event>>**: Organizes events by date for efficient chronological access.
-- **HashSet<string>**: Stores unique event categories.
-- **Queue<string>**: Tracks search history to facilitate recommendations.
-- **HashSet<Event>**: Keeps track of displayed events to ensure uniqueness in recommendations.
-
-## Example Events
-
-The following are some examples of events that may be displayed:
-
-- **Neighborhood Block Party**
-  - **Category**: Cultural
-  - **Date**: 2024-10-12
-  - **Description**: Enjoy food, games, and activities with your neighbors.
-
-- **Basketball Tournament**
-  - **Category**: Sports
-  - **Date**: 2024-11-07
-  - **Description**: Compete in our annual basketball tournament.
-
-- **City Council Workshop**
-  - **Category**: Public Meetings
-  - **Date**: 2024-12-03
-  - **Description**: Participate in discussions about community issues.
-
 
 
 
@@ -179,10 +132,15 @@ Press F5 or click on the Start button in Visual Studio to run the application.
 ## Usage
 Upon startup, the main menu will be presented with the following options:
 Report Issues (available)
-Local Events and Announcements (to be implemented)
+Local Events and Announcements (available)
 Service Request Status (to be implemented)
 
-As of Part 1, only the report issues page is available. On this page, you can fill Out the Report Form:
+As of Part 2, only the report issues page and local events page is available. 
+
+## Usage of the Reports Page
+
+**Reports Page**
+On this page, you can fill Out the Report Form:
 
 **Location Input:**
 Find the Location Textbox: On the Report Issues page, locate the textbox labeled Location.
@@ -215,3 +173,52 @@ Navigate Away:
 **Return to Main Menu:** If you wish to go back to the main menu or explore other sections of the application, use the Back to Main Menu button or other navigation buttons provided on the page.
 
 **See all Reported Issues:** Click on the See list button to see a history of reported issues.
+
+## Usage of the Events Page
+
+1. **Loading Events**: Upon opening the form, a predefined set of sample events is loaded for demonstration purposes.
+   
+2. **Searching Events**:
+   - Enter a search term in the text box provided.
+   - Select a category from the dropdown menu (e.g., "Cultural", "Sports", "All").
+   - Specify a date range using the date pickers.
+   - Click the **Search** button to filter events based on your criteria.
+
+3. **Viewing Results**:
+   - The matching events will be displayed in the `RichTextBox` with their title, category, date, and description.
+   - If no events match the search criteria, a message will indicate that no events were found.
+
+4. **Recommendations**:
+   - After each search, the app provides event recommendations based on previously searched terms.
+   - Recommended events will appear below the search results.
+
+5. **Navigating Back**:
+   - Click the **Back to Main Menu** button to close the form and return to the main application menu.
+
+## Data Structure
+
+- **SortedDictionary<DateTime, Queue<Event>>**: Organizes events by date for efficient chronological access.
+- **HashSet<string>**: Stores unique event categories.
+- **Queue<string>**: Tracks search history to facilitate recommendations.
+- **HashSet<Event>**: Keeps track of displayed events to ensure uniqueness in recommendations.
+
+## Example Events
+
+The following are some examples of events that may be displayed:
+
+- **Neighborhood Block Party**
+  - **Category**: Cultural
+  - **Date**: 2024-10-12
+  - **Description**: Enjoy food, games, and activities with your neighbors.
+
+- **Basketball Tournament**
+  - **Category**: Sports
+  - **Date**: 2024-11-07
+  - **Description**: Compete in our annual basketball tournament.
+
+- **City Council Workshop**
+  - **Category**: Public Meetings
+  - **Date**: 2024-12-03
+  - **Description**: Participate in discussions about community issues.
+
+
