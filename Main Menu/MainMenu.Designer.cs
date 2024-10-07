@@ -44,9 +44,10 @@
             this.btnReportIssues.BackColor = System.Drawing.Color.MistyRose;
             this.btnReportIssues.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportIssues.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnReportIssues.Location = new System.Drawing.Point(3, 3);
+            this.btnReportIssues.Location = new System.Drawing.Point(3, 2);
+            this.btnReportIssues.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReportIssues.Name = "btnReportIssues";
-            this.btnReportIssues.Size = new System.Drawing.Size(679, 122);
+            this.btnReportIssues.Size = new System.Drawing.Size(603, 98);
             this.btnReportIssues.TabIndex = 0;
             this.btnReportIssues.Text = "Report Issues";
             this.btnReportIssues.UseVisualStyleBackColor = false;
@@ -59,12 +60,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLocalEvents.AutoSize = true;
             this.btnLocalEvents.BackColor = System.Drawing.Color.RosyBrown;
-            this.btnLocalEvents.Enabled = false;
             this.btnLocalEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLocalEvents.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnLocalEvents.Location = new System.Drawing.Point(3, 131);
+            this.btnLocalEvents.Location = new System.Drawing.Point(3, 104);
+            this.btnLocalEvents.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocalEvents.Name = "btnLocalEvents";
-            this.btnLocalEvents.Size = new System.Drawing.Size(679, 122);
+            this.btnLocalEvents.Size = new System.Drawing.Size(603, 98);
             this.btnLocalEvents.TabIndex = 1;
             this.btnLocalEvents.Text = "Local Events and Announcements";
             this.btnLocalEvents.UseVisualStyleBackColor = false;
@@ -80,9 +81,10 @@
             this.btnServiceRequestStatus.Enabled = false;
             this.btnServiceRequestStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnServiceRequestStatus.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.btnServiceRequestStatus.Location = new System.Drawing.Point(3, 259);
+            this.btnServiceRequestStatus.Location = new System.Drawing.Point(3, 206);
+            this.btnServiceRequestStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnServiceRequestStatus.Name = "btnServiceRequestStatus";
-            this.btnServiceRequestStatus.Size = new System.Drawing.Size(679, 122);
+            this.btnServiceRequestStatus.Size = new System.Drawing.Size(603, 99);
             this.btnServiceRequestStatus.TabIndex = 2;
             this.btnServiceRequestStatus.Text = "Service Request Status";
             this.btnServiceRequestStatus.UseVisualStyleBackColor = false;
@@ -99,26 +101,28 @@
             this.tableLayoutPanel1.Controls.Add(this.btnReportIssues, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(685, 384);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(609, 307);
             this.tableLayoutPanel1.TabIndex = 3;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Sienna;
-            this.ClientSize = new System.Drawing.Size(685, 384);
+            this.ClientSize = new System.Drawing.Size(609, 307);
             this.Controls.Add(this.tableLayoutPanel1);
             this.ForeColor = System.Drawing.Color.Brown;
             this.HelpButton = true;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainMenu";
             this.Text = "Municipal Main Menu";
             this.TopMost = true;
