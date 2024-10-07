@@ -23,11 +23,14 @@ namespace MunicipalServicesApp
 
         private void btnLocalEvents_Click(object sender, EventArgs e)
         {
-
+            LocalEventsForm localEventsForm = new LocalEventsForm();
+            localEventsForm.Show();
+            this.Hide(); // Hide the main form
         }
 
         private void btnServiceRequestStatus_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("This feature is not yet implemented.", "Coming Soon");
 
         }
 
