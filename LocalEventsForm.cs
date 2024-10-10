@@ -167,10 +167,33 @@ namespace MunicipalServicesApp
 
 
         // Appends the details of an event to the RichTextBox in a formatted manner
-        private void AppendEventToRichTextBox(Event ev)
+        private void AppendEventToRichTextBox(Event ev, string searchTerm = "")
         {
+            rtbEvents.SelectionStart = rtbEvents.TextLength;
+            rtbEvents.SelectionLength = 0;
+            rtbEvents.SelectionColor = Color.Black; // Default color
+
+            // Append event details
             rtbEvents.AppendText($"{ev.Date.ToShortDateString()}\n");
-            rtbEvents.AppendText($"{ev.Title} ({ev.Category})\n");
+
+            if (!string.IsNullOrEmpty(searchTerm) && ev.Title.ToLower().Contains(searchTerm.ToLower()))
+            {
+                // Highlight the matched term
+                int startIndex = ev.Title.ToLower().IndexOf(searchTerm.ToLower());
+                rtbEvents.AppendText(ev.Title.Substring(0, startIndex));
+
+                rtbEvents.SelectionColor = Color.Red; // Highlight color
+                rtbEvents.AppendText(ev.Title.Substring(startIndex, searchTerm.Length));
+
+                rtbEvents.SelectionColor = Color.Black; // Reset to default
+                rtbEvents.AppendText(ev.Title.Substring(startIndex + searchTerm.Length));
+            }
+            else
+            {
+                rtbEvents.AppendText($"{ev.Title}");
+            }
+
+            rtbEvents.AppendText($" ({ev.Category})\n");
             rtbEvents.AppendText($"{ev.Description}\n");
             rtbEvents.AppendText("------------------------------\n");
         }
@@ -211,6 +234,11 @@ namespace MunicipalServicesApp
         //Events are recommended based on matching titles and are presented in a user-friendly manner within the RichTextBox via the ShowRecommendations method.
         private void ShowRecommendations()
         {
+            if (searchHistory.Count == 0)
+            {
+                rtbEvents.AppendText("\n\nNo search history available for recommendations.\n");
+                return;
+            }
             var recommendations = RecommendEvents();
 
             if (recommendations.Count > 0)
