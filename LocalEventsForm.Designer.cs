@@ -77,7 +77,7 @@
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.69725F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.30275F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 232F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
             this.tableLayoutPanel1.Controls.Add(this.lblDateRange, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpFrom, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.dtpTo, 2, 0);
@@ -101,7 +101,7 @@
             // dtpFrom
             // 
             this.dtpFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpFrom.Location = new System.Drawing.Point(311, 3);
+            this.dtpFrom.Location = new System.Drawing.Point(310, 3);
             this.dtpFrom.Name = "dtpFrom";
             this.dtpFrom.Size = new System.Drawing.Size(229, 34);
             this.dtpFrom.TabIndex = 2;
@@ -110,7 +110,7 @@
             // dtpTo
             // 
             this.dtpTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpTo.Location = new System.Drawing.Point(546, 3);
+            this.dtpTo.Location = new System.Drawing.Point(545, 3);
             this.dtpTo.Name = "dtpTo";
             this.dtpTo.Size = new System.Drawing.Size(225, 34);
             this.dtpTo.TabIndex = 3;
@@ -118,15 +118,24 @@
             // 
             // cmbCategoryPick
             // 
+            this.cmbCategoryPick.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.cmbCategoryPick.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCategoryPick.FormattingEnabled = true;
             this.cmbCategoryPick.Items.AddRange(new object[] {
             "All",
-            "Cultural",
-            "Sports",
+            "Community & Cultural",
+            "",
+            "Sports & Fitness",
+            "",
             "Public Meetings",
-            "Local",
-            "Education"});
+            "",
+            "Arts & Performance",
+            "",
+            "Local Business & Markets",
+            "",
+            "Education & Workshops",
+            "",
+            "Environmental & Outdoors"});
             this.cmbCategoryPick.Location = new System.Drawing.Point(312, 47);
             this.cmbCategoryPick.Name = "cmbCategoryPick";
             this.cmbCategoryPick.Size = new System.Drawing.Size(461, 39);
@@ -246,6 +255,7 @@
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "LocalEventsForm";
             this.Text = "LocalEventsForm";
+            this.Load += new System.EventHandler(this.LocalEventsForm_Load_1);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.flowLayoutPanel1.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
