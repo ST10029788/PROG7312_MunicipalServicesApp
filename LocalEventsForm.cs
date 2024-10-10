@@ -11,6 +11,7 @@ namespace MunicipalServicesApp
 {
     public partial class LocalEventsForm : Form
     {
+        //dotnet-bot (2024). SortedDictionary Class (System.Collections.Generic). [online] Microsoft.com. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.sorteddictionary-2?view=net-8.0 [Accessed 1 Oct. 2024].
         // Sorted dictionary that organizes events by date
         //Hash Tables, Dictionaries, Sorted Dictionaries: A SortedDictionary<DateTime, Queue<Event>> is used to organize events by their date, allowing for efficient retrieval of events in chronological order.
         //Stacks, Queues, Priority Queues: A Queue<Event> is used within the SortedDictionary<DateTime, Queue<Event>> eventsByDate to manage events sorted by date. This is a implementation of a queue to handle events scheduled for specific dates.
@@ -89,6 +90,9 @@ namespace MunicipalServicesApp
 
             PopulateCategoryComboBox();
         }
+        //Adapted from StackOverflow
+        //Bennett, G. (2024). Binding a WPF ComboBox to a custom list. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/561166/binding-a-wpf-combobox-to-a-custom-list [Accessed 10 Oct. 2024].
+        //https://stackoverflow.com/users/35377/geoff-bennett
 
         // Method to bind hash set eventCategories to category combobox
         private void PopulateCategoryComboBox()
