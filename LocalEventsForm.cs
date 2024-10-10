@@ -292,6 +292,8 @@ namespace MunicipalServicesApp
                 return false;
             }
 
+            //Mikejo5000 (2024). Generate C# Equals and GetHashCode Method Overrides - Visual Studio (Windows). [online] Microsoft.com. Available at: https://learn.microsoft.com/en-us/visualstudio/ide/reference/generate-equals-gethashcode-methods?view=vs-2022 [Accessed 10 Oct. 2024].
+
             // Generate a unique hash code for the event based on title, category, and date
             public override int GetHashCode()
             {
@@ -301,6 +303,9 @@ namespace MunicipalServicesApp
 
         private void LocalEventsForm_Load(object sender, EventArgs e)
         {
+
+            //dotnet-bot (2024). DateTimePicker.MinDate Property (System.Windows.Forms). [online] Microsoft.com. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.windows.forms.datetimepicker.mindate?view=windowsdesktop-8.0 [Accessed 10 Oct. 2024].
+
             DateTime today = DateTime.Today;
             dtpFrom.MinDate = today; // Prevent selecting past dates for 'From'
             dtpTo.MinDate = today;   // Prevent selecting past dates for 'To'
@@ -322,6 +327,9 @@ namespace MunicipalServicesApp
 
         private void dtpTo_ValueChanged(object sender, EventArgs e)
         {
+
+            //Vbforums.com. (2024). DatePicker MaxDate-VBForums. [online] Available at: https://www.vbforums.com/showthread.php?747743-DatePicker-MaxDate [Accessed 10 Oct. 2024].
+
             // Update the maximum selectable date for dtpFrom
             dtpFrom.MaxDate = dtpTo.Value;
 
