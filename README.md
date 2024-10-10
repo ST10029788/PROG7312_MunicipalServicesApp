@@ -4,16 +4,14 @@
 1. [Introduction](#introduction)
 2. [Features](#features)
    - 2.1 Report Issues Page
-   - 2.2 Local Events and Announcements (Future Feature)
+   - 2.2 Local Events and Announcements
    - 2.3 Service Request Status (Future Feature)
 3. [Installation](#installation)
    - 3.1 Prerequisites
    - 3.2 Step-by-Step Installation Instructions
 4. [Usage](#usage)
-   - 4.1 Main Menu Overview
-   - 4.2 Reporting an Issue
-   - 4.3 Engagement Features
-   - 4.4 Navigation
+   - Reports Page
+   - Events Page
 ## Introduction
 The Municipal Services Application is a C# .NET Framework software designed to enhance municipal service delivery in South Africa. This application allows residents to report issues, access local events and announcements, and track service requests. This document provides detailed instructions on how to compile, run, and use the application.  This guide will help you set up and use the app, even if you're new to computers.
 
