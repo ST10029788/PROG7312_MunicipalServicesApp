@@ -24,6 +24,8 @@ namespace MunicipalServicesApp
         // Queue to store search history for recommendation feature
         private Queue<string> searchHistory = new Queue<string>();
 
+        //dotnet-bot (2024). HashSet Class (System.Collections.Generic). [online] Microsoft.com. Available at: https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.hashset-1?view=net-8.0 [Accessed 10 Oct. 2024].
+
         // HashSet to track displayed events
         //Sets: A HashSet<Event> displayedEvents is used to track events that have been displayed to the user, ensuring uniqueness and preventing duplicates in the recommendations.
         private HashSet<Event> displayedEvents = new HashSet<Event>();
@@ -103,6 +105,10 @@ namespace MunicipalServicesApp
             {
                 cmbCategoryPick.Items.Add(category);
             }
+
+            //Shane (2024). Setting SelectedIndex to 0 for DropDown with AutoPostBack set to true. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/54470093/setting-selectedindex-to-0-for-dropdown-with-autopostback-set-to-true [Accessed 10 Oct. 2024].
+            //https://stackoverflow.com/users/5971071/shane
+
             cmbCategoryPick.SelectedIndex = 0; // Set default selection
         }
 
@@ -169,6 +175,8 @@ namespace MunicipalServicesApp
             }
         }
 
+        //ElektroStudios (2024). Fastest way to append text to a richtextbox? [online] Stack Overflow. Available at: https://stackoverflow.com/questions/16703901/fastest-way-to-append-text-to-a-richtextbox [Accessed 10 Oct. 2024].
+        //https://stackoverflow.com/users/4480932/cordell
 
         // Appends the details of an event to the RichTextBox in a formatted manner
         private void AppendEventToRichTextBox(Event ev, string searchTerm = "")
