@@ -36,10 +36,10 @@ namespace MunicipalServicesApp
             InitializeComponent();
 
             // Set the size of the form
-            this.Size = new Size(800, 600);
+           // this.Size = new Size(800, 600);
 
             // Set the minimum size of the form
-            this.MinimumSize = new Size(800, 550);
+          //  this.MinimumSize = new Size(800, 550);
 
             // Opening form in the center of the screen
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -369,6 +369,21 @@ namespace MunicipalServicesApp
         }
 
         private void LocalEventsForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtbSearchEvents_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
