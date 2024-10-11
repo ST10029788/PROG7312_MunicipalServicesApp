@@ -56,7 +56,9 @@ namespace MunicipalServicesApp
             eventsByDate = new SortedDictionary<DateTime, Queue<Event>>();
             try
             {
-                // Existing sample Events
+                // Sample events
+                //Created with OpenAi (2024)
+                //Chatgpt.com. (2024). ChatGPT. [online] Available at: https://chatgpt.com/ [Accessed 11 Oct. 2024].
                 AddEventToQueue(new Event { Title = "Neighborhood Block Party", Category = "Community & Cultural", Date = new DateTime(2024, 10, 13), Description = "Enjoy food, games, and activities with your neighbors." });
                 AddEventToQueue(new Event { Title = "Basketball Tournament", Category = "Sports & Fitness", Date = new DateTime(2024, 11, 07), Description = "Compete in our annual basketball tournament." });
                 AddEventToQueue(new Event { Title = "City Council Workshop", Category = "Public Meetings", Date = new DateTime(2024, 12, 03), Description = "Participate in discussions about community issues." });
@@ -83,6 +85,24 @@ namespace MunicipalServicesApp
                 AddEventToQueue(new Event { Title = "Volunteer Day", Category = "Community & Cultural", Date = new DateTime(2024, 10, 19), Description = "Join us for a day of community service." });
                 AddEventToQueue(new Event { Title = "Kids’ Art Camp", Category = "Education & Workshops", Date = new DateTime(2024, 11, 04), Description = "A creative camp for kids to explore art." });
                 AddEventToQueue(new Event { Title = "Heritage Festival", Category = "Community & Cultural", Date = new DateTime(2024, 11, 11), Description = "Celebrate diverse cultures through food, music, and activities." });
+                AddEventToQueue(new Event { Title = "Halloween Spooktacular", Category = "Community & Cultural", Date = new DateTime(2024, 10, 31), Description = "Join us for a fun Halloween celebration with games and costumes." });
+                AddEventToQueue(new Event { Title = "Thanksgiving Potluck", Category = "Community & Cultural", Date = new DateTime(2024, 11, 28), Description = "Share a meal and celebrate gratitude with the community." });
+                AddEventToQueue(new Event { Title = "Local Talent Show", Category = "Arts & Performance", Date = new DateTime(2024, 11, 16), Description = "Showcase the amazing talent in our community." });
+                AddEventToQueue(new Event { Title = "Environmental Clean-Up Day", Category = "Environmental & Outdoors", Date = new DateTime(2024, 11, 03), Description = "Help keep our community clean by participating in a clean-up event." });
+                AddEventToQueue(new Event { Title = "Holiday Baking Class", Category = "Education & Workshops", Date = new DateTime(2024, 12, 10), Description = "Learn to bake holiday treats with local chefs." });
+                AddEventToQueue(new Event { Title = "New Year's Eve Celebration", Category = "Community & Cultural", Date = new DateTime(2024, 12, 31), Description = "Ring in the new year with music, food, and festivities." });
+                AddEventToQueue(new Event { Title = "Winter Hiking Trip", Category = "Environmental & Outdoors", Date = new DateTime(2024, 12, 28), Description = "Join us for a scenic winter hike in the local trails." });
+                AddEventToQueue(new Event { Title = "Local Authors Book Fair", Category = "Arts & Performance", Date = new DateTime(2024, 12, 07), Description = "Meet local authors and discover new books." });
+                AddEventToQueue(new Event { Title = "Holiday Movie Marathon", Category = "Community & Cultural", Date = new DateTime(2024, 12, 12), Description = "Enjoy classic holiday movies with family and friends." });
+                AddEventToQueue(new Event { Title = "Winter Wonderland Festival", Category = "Community & Cultural", Date = new DateTime(2024, 12, 14), Description = "Experience festive activities, food, and entertainment." });
+                AddEventToQueue(new Event { Title = "Yoga in the Park", Category = "Health & Wellness", Date = new DateTime(2024, 10, 25), Description = "Join us for a relaxing yoga session outdoors." });
+                AddEventToQueue(new Event { Title = "Community Poetry Workshop", Category = "Education & Workshops", Date = new DateTime(2024, 11, 05), Description = "Enhance your poetry writing skills in this workshop." });
+                AddEventToQueue(new Event { Title = "Children’s Science Workshop", Category = "Education & Workshops", Date = new DateTime(2024, 11, 08), Description = "Fun and engaging science experiments for kids." });
+                AddEventToQueue(new Event { Title = "Local Wine Tasting", Category = "Local Business & Markets", Date = new DateTime(2024, 11, 30), Description = "Sample local wines and learn about the winemaking process." });
+                AddEventToQueue(new Event { Title = "Art in the Park", Category = "Arts & Performance", Date = new DateTime(2024, 10, 26), Description = "Join local artists for a day of painting and creativity in the park." });
+                AddEventToQueue(new Event { Title = "Book Club Meet-Up", Category = "Education & Workshops", Date = new DateTime(2024, 11, 09), Description = "Join fellow book lovers for a lively discussion." });
+                AddEventToQueue(new Event { Title = "Tech Talk: Future Innovations", Category = "Education & Workshops", Date = new DateTime(2024, 11, 21), Description = "Explore the latest trends in technology with local experts." });
+                AddEventToQueue(new Event { Title = "Family Game Night", Category = "Community & Cultural", Date = new DateTime(2024, 10, 15), Description = "Bring your family for an evening of fun games and laughter." });
 
             }
             catch (Exception ex)
