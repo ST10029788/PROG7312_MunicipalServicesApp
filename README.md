@@ -5,7 +5,7 @@
 2. [Features](#features)
    - 2.1 Report Issues Page
    - 2.2 Local Events and Announcements
-   - 2.3 Service Request Status (Future Feature)
+   - 2.3 Service Request Status 
 3. [Installation](#installation)
    - 3.1 Prerequisites
    - 3.2 Step-by-Step Installation Instructions
@@ -17,12 +17,15 @@ The Municipal Services Application is a C# .NET Framework software designed to e
 
 
 ## Features
-### Part 1: Report Issues Page
+### Part 3: Service Request Status
 **Main Menu:**
 - **Main Menu Options:**
   - **Report Issues:** Report problems like broken streetlights or potholes.
   - **Local Events and Announcements:** Future feature for community news and events.
   - **Service Request Status:** Future feature to check the status of your reports.
+
+
+**Service Request Status**
 
 
 **Report Issues Page:**
