@@ -6,7 +6,8 @@ namespace MunicipalServicesApp
 {
     public partial class ReportIssuesForm : Form
     {
-        private List<IssueReport> issueReports = new List<IssueReport>(); // List to store reported issues
+        public static List<ServiceRequest> issueReports = new List<ServiceRequest>();
+        // List to store reported issues
 
         public ReportIssuesForm()
         {

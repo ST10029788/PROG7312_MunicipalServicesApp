@@ -77,16 +77,15 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnServiceRequestStatus.AutoSize = true;
-            this.btnServiceRequestStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnServiceRequestStatus.Enabled = false;
+            this.btnServiceRequestStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnServiceRequestStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnServiceRequestStatus.ForeColor = System.Drawing.Color.Silver;
+            this.btnServiceRequestStatus.ForeColor = System.Drawing.Color.Firebrick;
             this.btnServiceRequestStatus.Location = new System.Drawing.Point(3, 206);
             this.btnServiceRequestStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnServiceRequestStatus.Name = "btnServiceRequestStatus";
             this.btnServiceRequestStatus.Size = new System.Drawing.Size(603, 99);
             this.btnServiceRequestStatus.TabIndex = 2;
-            this.btnServiceRequestStatus.Text = "Service Request Status (Not Available) ";
+            this.btnServiceRequestStatus.Text = "Service Request Status \r\n";
             this.btnServiceRequestStatus.UseVisualStyleBackColor = false;
             this.btnServiceRequestStatus.Click += new System.EventHandler(this.btnServiceRequestStatus_Click);
             // 

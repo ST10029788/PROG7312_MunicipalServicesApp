@@ -30,7 +30,9 @@ namespace MunicipalServicesApp
 
         private void btnServiceRequestStatus_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This feature is not yet implemented.", "Coming Soon");
+            ServiceRequestStatusForm serviceStatusForm = new ServiceRequestStatusForm();
+            serviceStatusForm.ShowDialog();
+
 
         }
 
