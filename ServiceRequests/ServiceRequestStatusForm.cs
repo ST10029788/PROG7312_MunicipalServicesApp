@@ -143,6 +143,8 @@ namespace MunicipalServicesApp
     }
 
     // AVLTree class for storing service requests in a balanced tree
+    // Adapted from in (2008). Tree data structure in C#. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/66893/tree-data-structure-in-c-sharp [Accessed 13 Nov. 2024].
+    // (in, 2008)
     public class AVLTree<T> where T : IComparable<T>
     {
         private TreeNode<T> root;
@@ -154,6 +156,7 @@ namespace MunicipalServicesApp
         }
 
         // Recursive insertion with balancing
+        // method adapted from GeeksforGeeks (2012). Insertion in an AVL Tree. [online] GeeksforGeeks. Available at: https://www.geeksforgeeks.org/insertion-in-an-avl-tree/ [Accessed 13 Nov. 2024].
         private TreeNode<T> InsertRecursive(TreeNode<T> node, T value)
         {
             if (node == null)
@@ -189,6 +192,7 @@ namespace MunicipalServicesApp
 
             return node;
         }
+        //Rotation methods adapted from Code (2011). Code with explanation for binary tree rotation (left OR right). [online] Stack Overflow. Available at: https://stackoverflow.com/questions/4597650/code-with-explanation-for-binary-tree-rotation-left-or-right [Accessed 13 Nov. 2024].
 
         // Rotate nodes to the right
         private TreeNode<T> RotateRight(TreeNode<T> y)
@@ -207,6 +211,7 @@ namespace MunicipalServicesApp
             y.Left = x;
             return y;
         }
+        //method adapted from Orama.com. (2023). AVL Trees Explained. [online] Available at: https://orama.com/blog/avl-trees-explained [Accessed 13 Nov. 2024].
 
         // Calculate the balance factor of a node (difference in heights of left and right subtrees)
         private int GetBalanceFactor(TreeNode<T> node)
@@ -344,7 +349,8 @@ namespace MunicipalServicesApp
     }
 
   
-    /// Graph class for service request dependencies and Minimum Spanning Tree (MST)
+    // Graph class for service request dependencies and Minimum Spanning Tree (MST)
+    //method partially adapted from list (2012). adjacency list for graph build. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/10740894/adjacency-list-for-graph-build/10741071 [Accessed 13 Nov. 2024].
   
     public class Graph<T>
     {
@@ -361,6 +367,8 @@ namespace MunicipalServicesApp
             if (adjacencyList.ContainsKey(fromNode))
                 adjacencyList[fromNode].Add(toNode);
         }
+
+        //method adapted from search, B. (2022). Breadth-first search from one node to another. [online] Stack Overflow. Available at: https://stackoverflow.com/questions/71286470/breadth-first-search-from-one-node-to-another [Accessed 13 Nov. 2024].
 
         public List<T> BreadthFirstSearch(T startNode)
         {
@@ -405,6 +413,8 @@ namespace MunicipalServicesApp
             }
 
             // Prim's algorithm
+            //GeeksforGeeks (2012). Prim’s Algorithm for Minimum Spanning Tree (MST). [online] GeeksforGeeks. Available at: https://www.geeksforgeeks.org/prims-minimum-spanning-tree-mst-greedy-algo-5/ [Accessed 13 Nov. 2024].
+
             while (priorityQueue.Count > 0)
             {
                 var edge = priorityQueue.Dequeue();
@@ -432,6 +442,8 @@ namespace MunicipalServicesApp
     }
 
     //Priority queue class for Prim's MST algorithm
+    //method adapted from GeeksforGeeks (2016). Prim’s algorithm using priority_queue in STL. [online] GeeksforGeeks. Available at: https://www.geeksforgeeks.org/prims-algorithm-using-priority_queue-stl/ [Accessed 13 Nov. 2024].
+
  
     public class PriorityQueue<T>
     {
@@ -454,6 +466,7 @@ namespace MunicipalServicesApp
 
     
     // Red black tree class
+    //method adapted from Cs.au.dk. (2024). Available at: https://cs.au.dk/~gerth/ads20/code/RedBlackTree.java [Accessed 13 Nov. 2024].
   
     public class RedBlackTree<T> where T : IComparable<T>
     {
@@ -515,6 +528,7 @@ namespace MunicipalServicesApp
         }
 
         // Fix Red-Black Tree violations after an insertion
+        //method adapted from GeeksforGeeks (2014). Introduction to RedBlack Tree. [online] GeeksforGeeks. Available at: https://www.geeksforgeeks.org/introduction-to-red-black-tree/ [Accessed 13 Nov. 2024].
         private void FixInsert(RedBlackNode node)
         {
             while (node != root && node.Parent.Color == NodeColor.Red)
@@ -607,6 +621,7 @@ namespace MunicipalServicesApp
             temp.Right = node;
             node.Parent = temp;
         }
+        //method adapted from GeeksforGeeks (2023). Inorder Traversal of Binary Tree. [online] GeeksforGeeks. Available at: https://www.geeksforgeeks.org/inorder-traversal-of-binary-tree/ [Accessed 13 Nov. 2024].
 
         // In-order traversal to retrieve elements in sorted order
         public List<T> InOrderTraversal()
