@@ -47,6 +47,26 @@ Stay informed about upcoming events and local announcements.
 
 ### 2.3 Service Request Status (Implemented)
 This feature allows users to track the status of their reported issues in real-time.
+Viewing Service Requests
+Upon launching the service requests status page from the menu, the application will automatically load service requests from a global list defined in ReportIssuesForm.
+The service requests will be displayed in a ListView with the following details:
+
+Request ID: Unique identifier for the service request.
+
+Description: A brief description of the service request.
+
+Status: Current status of the service request (e.g., Pending, Completed).
+
+Submission Date: The date the request was submitted.
+
+Navigating the Application
+
+Back to Main Menu: Click the "Back to Main Menu" button to close the ServiceRequestStatusForm and return to the main menu.
+
+Error Handling
+
+If there are issues loading or displaying service requests, an error message will be displayed using a message box indicating the problem.
+Data Structures Used
 
 - **Service Request List:** A well-organized list of all submitted service requests, sorted by unique identifiers (Request IDs).
 - **Track Progress:** Users can check the progress of their service requests based on status updates.
