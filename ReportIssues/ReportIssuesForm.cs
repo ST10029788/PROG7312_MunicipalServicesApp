@@ -130,18 +130,23 @@ namespace MunicipalServicesApp
             {
                 try
                 {
-                    // Create a new issue report and add it to the list
-                    IssueReport newReport = new IssueReport
+                    //  input data
+                    string location = txtLocation.Text.Trim();
+                    string category = cmbCategory.SelectedItem?.ToString() ?? string.Empty;
+                    string description = rtbDescription.Text.Trim();
+
+                    // Validate input
+                    if (string.IsNullOrEmpty(location) || string.IsNullOrEmpty(category) || string.IsNullOrEmpty(description))
                     {
-                        Location = txtLocation.Text,
-                        Category = cmbCategory.SelectedItem.ToString(),
-                        Description = rtbDescription.Text,
-                        // Optionally include other fields like media paths
-                    };
+                        MessageBox.Show("Please fill in all required fields.", "Input Error");
+                        return;
+                    }
 
-                    issueReports.Add(newReport);
 
-                    // Save the report to a database or send it to a server later in development
+                    // Create and add new reported issue (using ServiceRequest class)
+                    ServiceRequest newIssue = new ServiceRequest(issueReports.Count + 1, description, "Pending", DateTime.Now);
+                    issueReports.Add(newIssue); // Store issue globally
+                    Console.WriteLine($"Added new issue: {newIssue.RequestId}, Description: {newIssue.Description}");                    // Save the report to a database or send it to a server later in development
                     // Display confirmation message
 
                     MessageBox.Show("Thank you for submitting your issue report! We'll review it and get back to you soon.", "Submission Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);

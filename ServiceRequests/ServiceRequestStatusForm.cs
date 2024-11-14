@@ -11,7 +11,8 @@ namespace MunicipalServicesApp
 {
     public partial class ServiceRequestStatusForm : Form
     {
-
+        private System.Windows.Forms.TextBox txtFilter; // TextBox for filtering
+        private System.Windows.Forms.Button btnFilter; // Button to trigger filtering
         private AVLTree<ServiceRequest> serviceRequestsAVLTree;  // Store service requests in AVL tree
         private RedBlackTree<ServiceRequest> serviceRequestsRedBlackTree;  // Store service requests in Red-Black tree
         private MinHeap<ServiceRequest> serviceRequestsHeap;  // Min-Heap for prioritization
@@ -40,6 +41,8 @@ namespace MunicipalServicesApp
         {
             try
             {
+                Console.WriteLine($"Loading {ReportIssuesForm.issueReports.Count} service requests.");
+
                 // Loop through each service request in the global issueReports list
                 foreach (var request in ReportIssuesForm.issueReports)
                 {
@@ -73,6 +76,7 @@ namespace MunicipalServicesApp
 
                 // Retrieve the service requests in an ordered list using an in-order traversal of the AVL tree
                 List<ServiceRequest> avlRequests = serviceRequestsAVLTree.InOrderTraversal();
+                Console.WriteLine($"Displaying {avlRequests.Count} service requests.");
 
                 // Loop through each request and create a ListView item to display it
                 foreach (var request in avlRequests)
@@ -108,12 +112,46 @@ namespace MunicipalServicesApp
 
         }
 
-        private void ServiceRequestStatusForm_Load_1(object sender, EventArgs e)
+        private void lstServiceRequests_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            string filterText = txtFilter.Text.ToLower(); // Get the filter text and convert it to lower case
+            FilterServiceRequests(filterText);
+        }
 
-        private void lstServiceRequests_SelectedIndexChanged(object sender, EventArgs e)
+        private void FilterServiceRequests(string filterText)
+        {
+            // Clear existing items in the ListView
+            lstServiceRequests.Items.Clear();
+
+            // Retrieve the service requests in an ordered list using an in-order traversal of the AVL tree
+            List<ServiceRequest> avlRequests = serviceRequestsAVLTree.InOrderTraversal();
+
+            // Loop through each request and check if it matches the filter criteria
+            foreach (var request in avlRequests)
+            {
+                // Check if any of the properties contain the filter text
+                if (request.RequestId.ToString().Contains(filterText) ||
+                    request.Description.ToLower().Contains(filterText) ||
+                    request.Status.ToLower().Contains(filterText) ||
+                    request.SubmissionDate.ToShortDateString().Contains(filterText))
+                {
+                    // Create a new ListViewItem for the current request
+                    ListViewItem item = new ListViewItem(request.RequestId.ToString());
+                    item.SubItems.Add(request.Description);
+                    item.SubItems.Add(request.Status);
+                    item.SubItems.Add(request.SubmissionDate.ToShortDateString());
+
+                    // Add the item to the ListView
+                    lstServiceRequests.Items.Add(item);
+                }
+            }
+        }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
