@@ -1,4 +1,6 @@
 
+------------
+
 # Municipal Services App
 
 ## Table of Contents
@@ -6,218 +8,259 @@
 1. [Introduction](#introduction)  
 2. [Features](#features)  
    - 2.1 [Report Issues Page](#report-issues-page)  
-   - 2.2 [Local Events and Announcements](#local-events-and-announcements)  
-   - 2.3 [Service Request Status](#service-request-status)  
+   - 2.2 [Service Request Status](#service-request-status)  
+   - 2.3 [Local Events and Announcements](#local-events-and-announcements)  
 3. [Installation](#installation)  
    - 3.1 [Prerequisites](#prerequisites)  
    - 3.2 [Step-by-Step Installation Instructions](#step-by-step-installation-instructions)  
 4. [Usage](#usage)  
    - 4.1 [Reports Page](#reports-page)  
-   - 4.2 [Events Page](#events-page)  
+   - 4.2 [Service Request Status](#service-request-status-page)  
+   - 4.3 [Events Page](#events-page)  
 5. [Data Structures](#data-structures)  
    - 5.1 [Part 2 Data Structures](#part-2-data-structures)  
    - 5.2 [Part 3 Data Structures Implementation](#part-3-data-structures)  
-6. [Conclusion](#conclusion)  
+6. [Conclusion](#conclusion)
 
----
+------------
 
 ## Introduction
 
-The **Municipal Services Application** is a C# .NET Framework-based tool designed to improve municipal service delivery in South Africa. It allows residents to report issues, track service requests, and stay informed about local events and announcements. This guide provides step-by-step instructions on compiling, running, and using the app, making it accessible even for users with limited technical expertise.
+The **Municipal Services Application** is a C# .NET Framework-based tool designed to improve municipal service delivery in South Africa. The application allows residents to report issues, track service requests, and stay informed about local events and announcements. This guide provides step-by-step instructions on compiling, running, and using the app, making it accessible even for users with limited technical expertise.
 
----
+------------
+
 
 ## Features
 
 ### 2.1 Report Issues Page
-Users can report issues with municipal services like streetlight malfunctions, potholes, and sanitation problems.
+
+This feature allows users to report issues related to municipal services, such as streetlight malfunctions, potholes, and sanitation problems.
 
 - **Location Input:** Users can enter the specific location of the issue.
-- **Category Selection:** A dropdown allows users to choose the category of the issue (e.g., Sanitation, Roads, Utilities).
-- **Description Box:** A rich text field for detailed descriptions of the issue.
-- **Media Attachment:** Users can attach images or documents to support their reports.
-- **Progress Feedback:** Dynamic features like progress bars or encouraging messages provide real-time feedback during submission.
+- **Category Selection:** A dropdown menu lets users select the issue's category (e.g., Sanitation, Roads, Utilities).
+- **Description Box:** A rich text field where users can provide detailed descriptions of the issue.
+- **Media Attachment:** Users can attach images or documents to help describe the issue.
+- **Progress Feedback:** The app provides real-time feedback, such as progress bars or encouraging messages, during submission.
 
-### 2.2 Local Events and Announcements
-Stay informed about upcoming events and local announcements.
+### 2.2 Service Request Status
 
-- **Event Search:** Search events by category, date range, and keyword.
+The **Service Request Status** feature allows users to track the status of their reported issues in real-time.
+
+- **Viewing Service Requests:** Users can access the service request status page from the main menu. The application will load service requests from a global list defined in the `ReportIssuesForm`.
+- **List View:** Service requests are displayed in a ListView with key details, including:
+  - **Request ID:** A unique identifier for the service request.
+  - **Description:** A brief description of the service request.
+  - **Status:** The current status (e.g., Pending, Completed).
+  - **Submission Date:** The date the request was submitted.
+  
+- **Navigating the Application:** To return to the main menu, users can click the "Back to Main Menu" button.
+  
+- **Error Handling:** If there is an issue with loading or displaying the service requests, an error message will appear using a message box.
+
+- **Data Structures Used:**
+  - **Service Request List:** An organized list of service requests, sorted by their Request IDs.
+  - **Track Progress:** Users can track progress via status updates.
+
+### 2.3 Local Events and Announcements
+
+Stay informed about upcoming events and local announcements in the municipality.
+
+- **Event Search:** Users can search for events by category, date range, and keywords.
 - **Event List:** Events are displayed in a clear, organized format using a `RichTextBox`.
-- **Event Recommendations:** Based on user search history, the app recommends relevant events.
+- **Event Recommendations:** Based on previous searches, the app will suggest relevant events.
 
-### 2.3 Service Request Status (Implemented)
-This feature allows users to track the status of their reported issues in real-time.
-Viewing Service Requests
-Upon launching the service requests status page from the menu, the application will automatically load service requests from a global list defined in ReportIssuesForm.
-The service requests will be displayed in a ListView with the following details:
+------------
 
-Request ID: Unique identifier for the service request.
 
-Description: A brief description of the service request.
-
-Status: Current status of the service request (e.g., Pending, Completed).
-
-Submission Date: The date the request was submitted.
-
-Navigating the Application
-
-Back to Main Menu: Click the "Back to Main Menu" button to close the ServiceRequestStatusForm and return to the main menu.
-
-Error Handling
-
-If there are issues loading or displaying service requests, an error message will be displayed using a message box indicating the problem.
-Data Structures Used
-
-- **Service Request List:** A well-organized list of all submitted service requests, sorted by unique identifiers (Request IDs).
-- **Track Progress:** Users can check the progress of their service requests based on status updates.
-- **Efficient Data Management:** Advanced data structures like AVL Trees, Red-Black Trees, and Heaps manage and display request information efficiently.
+Certainly! Below is a more detailed version of the **Installation** section with step-by-step instructions and extra clarification for users who may not be familiar with the development environment or the process of setting up the application.
 
 ---
 
 ## Installation
 
 ### 3.1 Prerequisites
-Ensure the following software is installed before you proceed:
 
-- **Microsoft Visual Studio** (2019 or later)  
-  - Available for download from [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/).
-- **.NET Framework** version 4.8 or later (usually bundled with Visual Studio).
+Before installing the **Municipal Services App**, ensure the following software is installed and configured on your computer:
+
+- **Microsoft Visual Studio** (2019 or later)
+  - Visual Studio is the integrated development environment (IDE) used to build and run the app.
+  - **Download Visual Studio**: Go to [Visual Studio Downloads](https://visualstudio.microsoft.com/downloads/) and download the free **Community Edition** or any of the paid versions.
+  - **Installation Steps**: When installing Visual Studio, ensure that the following components are selected during the setup:
+    - **Desktop development with C#** (this includes the .NET Framework)
+    - **.NET desktop development**
+    - **C# and Visual Basic**
+
+- **.NET Framework** version 4.8 or later
+  - The application is built using the .NET Framework. Version 4.8 or later is typically included with Visual Studio, but if it is not installed, you can download it separately.
+  - **Download .NET Framework 4.8**: [Microsoft .NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework)
+
+Once these prerequisites are installed, you can proceed to the next steps.
+
+---
 
 ### 3.2 Step-by-Step Installation Instructions
 
-1. **Download the Source Code:**
-   - Clone the repository from [GitHub](https://github.com/ST10029788/PROG7312_MunicipalServicesApp.git) or download it as a zip file.
-2. **Open the Solution:**
-   - Launch Visual Studio and open the `.sln` file from the downloaded source code directory.
-3. **Build the Solution:**
-   - In Visual Studio, go to the `Build` menu and select `Build Solution` (or press `Ctrl+Shift+B`).
-   - Resolve any build errors if they occur.
-4. **Run the Application:**
-   - Press `F5` or click the Start button to launch the application.
+#### 1. **Download the Source Code**
+
+You have two options to download the source code:
+
+- **Clone the repository using Git** (recommended if you plan to make modifications or updates to the source code):
+  1. Install **Git** from [Git Downloads](https://git-scm.com/downloads), if you haven't already.
+  2. Open a command prompt or Git Bash.
+  3. Clone the repository with the following command:
+     ```bash
+     git clone https://github.com/ST10029788/PROG7312_MunicipalServicesApp.git
+     ```
+  4. Navigate to the directory where the project is cloned:
+     ```bash
+     cd PROG7312_MunicipalServicesApp
+     ```
+
+- **Download the source as a ZIP file**:
+  1. Visit the [GitHub Repository](https://github.com/ST10029788/PROG7312_MunicipalServicesApp).
+  2. Click the green **Code** button and select **Download ZIP**.
+  3. Extract the ZIP file to a location on your computer where you can easily access it.
+
+#### 2. **Open the Solution in Visual Studio**
+
+1. Launch **Visual Studio**.
+2. In Visual Studio, go to the **File** menu and select **Open** > **Project/Solution**.
+3. Navigate to the folder where the source code is located (either the cloned Git repository or the extracted ZIP file).
+4. Select the **`PROG7312_MunicipalServicesApp.sln`** solution file and click **Open**.
+
+   - The solution file contains all the necessary project settings and configurations for building and running the app.
+
+#### 3. **Build the Solution**
+
+1. Once the solution is opened in Visual Studio, check the **Solution Explorer** on the right side to confirm that the project has been loaded correctly.
+2. To build the solution, go to the **Build** menu at the top of Visual Studio and click **Build Solution**. Alternatively, you can press `Ctrl+Shift+B`.
+3. Visual Studio will begin compiling the code. This may take a few seconds to several minutes, depending on your computer's performance.
+   
+   - If the build is successful, you’ll see a message saying “Build succeeded” in the **Output** window at the bottom of Visual Studio.
+   - If there are any build errors (e.g., missing dependencies, incorrect references, etc.), they will appear in the **Error List** window. You will need to review and fix these errors. Common issues include missing NuGet packages or incorrect project settings.
+
+   - **To resolve errors**:
+     - Ensure that you have installed all necessary Visual Studio components.
+     - If there are package-related errors, you can restore NuGet packages by right-clicking on the solution in **Solution Explorer** and selecting **Restore NuGet Packages**.
+
+#### 4. **Run the Application**
+
+Once the solution is successfully built, you can run the application.
+
+1. **Press `F5`** (or click the green **Start** button in the toolbar) to build and run the application.
+   
+   - Visual Studio will compile the solution and launch the application in **Debug Mode**. The app should now open in a new window, and you will be able to interact with the features, such as reporting issues or checking local events.
+
+2. **Troubleshooting**:
+   - If the application does not launch or displays an error, make sure that all prerequisites are installed correctly.
+   - Ensure that Visual Studio is set to use the correct version of the .NET Framework. You can check this by right-clicking the project in **Solution Explorer**, selecting **Properties**, and confirming that the **Target Framework** is set to **.NET Framework 4.8** or later.
 
 ---
+
+### Additional Notes
+
+- **Updating the Application**:
+  If you have cloned the repository using Git, you can keep your local copy updated by running the following command in your project directory:
+  ```bash
+  git pull origin main
+  ```
+
+- **Running without Visual Studio**:
+  If you don't have Visual Studio but would still like to run the app, you can build it using the .NET Core CLI or other IDEs. However, **Visual Studio** is the recommended environment for compiling and debugging the app due to its tight integration with the .NET Framework.
+
+
+------------
+
 
 ## Usage
 
 ### 4.1 Reports Page
-This page allows users to submit service issue reports.
 
-- **Location Input:** Enter the location of the issue.
-- **Category Selection:** Choose the issue category (e.g., Sanitation, Roads).
+The Reports Page allows users to submit service issue reports.
+
+- **Location Input:** Users can specify the issue’s location.
+- **Category Selection:** Choose the appropriate issue category (e.g., Sanitation, Roads).
 - **Description Box:** Provide a detailed description of the problem.
-- **Media Attachment:** Attach relevant images or documents.
+- **Media Attachment:** Attach images or documents to support the report.
 - **Submit Button:** Finalize and submit the report.
 
-After submission, users can track the status of their reports via the Service Request Status page.
+Once submitted, users can track the status of their report via the Service Request Status page.
 
-### 4.2 Events Page
-Here users can find local events and announcements.
+### 4.2 Service Request Status Page
 
-1. **Search Events:**
-   - Enter search terms, select a category, and specify a date range.
-   - Click **Search** to filter the event list.
-2. **View Results:**
-   - Events are displayed with their title, category, date, and description.
-   - If no events match the criteria, a message indicates no results found.
-3. **Event Recommendations:** After each search, the app suggests related events based on past searches.
-4. **Navigation:** Return to the main menu by clicking **Back to Main Menu**.
+- **Viewing Service Requests:** This page displays all the service requests users have made.
+- **Request Details:** Requests are listed with details like Request ID, Description, Status, and Submission Date.
+- **Tracking Progress:** Users can track updates as the service requests are processed (e.g., Pending, Completed).
+- **Back to Menu:** Users can return to the main menu by clicking the "Back to Main Menu" button.
 
----
+### 4.3 Events Page
+
+On the Events Page, users can explore local events and announcements.
+
+1. **Search Events:**  
+   - Input search terms, select a category, and choose a date range to filter events.
+   - Click **Search** to display matching results.
+   
+2. **View Results:**  
+   - Events are shown with details like title, category, date, and description.
+   - If no events match, a message will indicate no results.
+
+3. **Event Recommendations:** Based on previous searches, the app recommends relevant events.
+
+4. **Navigation:** Users can return to the main menu by clicking **Back to Main Menu**.
+
+------------
+
 
 ## Data Structures
 
 ### 5.1 Part 2 Data Structures
 
-- **SortedDictionary<DateTime, Queue<Event>>:** Efficiently organizes events by date, allowing quick retrieval of upcoming events.
-- **HashSet<string>:** Ensures unique event categories without duplicates.
-- **Queue<string>:** Tracks the user's search history to suggest relevant events.
-- **HashSet<Event>:** Prevents duplicate event entries in the recommended list.
+- **SortedDictionary<DateTime, Queue<Event>>:** Organizes events by date, enabling quick retrieval of upcoming events.
+- **HashSet<string>:** Ensures event categories are unique.
+- **Queue<string>:** Tracks user search history for personalized event recommendations.
+- **HashSet<Event>:** Prevents duplicate event entries.
 
-### 5.2 Part 3 Data Structures
+### 5.2 Part 3 Data Structures Implementation
 
-Here is the expanded section for **Part 3 Data Structures** with additional information on the AVL Tree, Red-Black Tree, Min-Heap, Graph, and Priority Queue, reflecting how each structure is utilized in the **MunicipalServicesApp**. This version includes more detailed explanations of their purpose, usage, benefits, and how they contribute to the overall application.
-
----
-
-### Part 3: Data Structures
-
-The **MunicipalServicesApp** leverages a variety of advanced data structures to efficiently manage and display service request information. These structures are key to ensuring optimal performance when handling complex tasks like sorting, prioritizing, and managing interdependent service requests. Below is a detailed explanation of each data structure implemented:
-
----
+In **Part 3**, several advanced data structures are used to optimize the management of service requests:
 
 #### **AVL Tree**
 
-- **Purpose:**  
-  The **AVL tree** is a self-balancing binary search tree (BST) that maintains a sorted order of elements, ensuring efficient search, insertion, and deletion operations. It automatically rebalances itself to maintain optimal performance, even with frequent updates.
-
-- **Usage in the App:**  
-  In the **MunicipalServicesApp**, the AVL tree stores instances of `ServiceRequest`, enabling efficient, ordered retrieval based on the `RequestId`. When new service requests are submitted, they are inserted into the AVL tree, which ensures that the data is always kept in sorted order. This structure supports efficient searching for specific service requests and allows for quick insertion and deletion when requests are updated or resolved.
-
-- **Benefits:**
-  - **Height-Balanced:** The AVL tree ensures that the height difference between the left and right subtrees is at most one. This balance ensures O(log n) time complexity for search, insert, and delete operations. This is especially useful when the service request data set is large and requires frequent updates.
-  - **In-Order Traversal:** The AVL tree supports in-order traversal, which returns elements in sorted order. This makes it easy to display service requests in ascending order of their `RequestId`, providing a user-friendly way to track and manage requests.
-
----
+- **Purpose:** A self-balancing binary search tree used for efficient data management.
+- **Usage:** Stores `ServiceRequest` instances to keep them sorted by `RequestId`, enabling fast searches, insertions, and deletions.
+- **Benefits:** Ensures O(log n) time complexity for search, insert, and delete operations.
 
 #### **Red-Black Tree**
 
-- **Purpose:**  
-  The **Red-Black tree** is another self-balancing binary search tree, similar to the AVL tree, but with different balancing properties. It provides efficient searching and insertion capabilities while maintaining a balanced structure, ensuring that all operations occur in O(log n) time.
-
-- **Usage in the App:**  
-  The **Red-Black tree** serves as an alternative to the AVL tree for storing and managing `ServiceRequest` instances. This provides flexibility in terms of balancing strategies, allowing the application to use different balanced trees based on specific use cases, such as when performance is a critical factor and frequent updates to the dataset are necessary.
-
-- **Benefits:**
-  - **Balanced Structure:** Red-Black trees use color properties to ensure balance, which guarantees that all insertions and deletions maintain O(log n) time complexity. This is particularly useful when service request data is continuously updated, and the system needs to maintain fast access and modification speeds.
-  - **Performance Comparison:** By implementing both AVL and Red-Black trees, the application allows for performance comparison under different scenarios. Developers can benchmark both trees and decide which one offers the best performance for their needs based on factors like the frequency of updates or queries.
-
----
+- **Purpose:** Another self-balancing binary search tree with different balancing properties.
+- **Usage:** Acts as an alternative to the AVL tree for managing `ServiceRequest` instances.
+- **Benefits:** Provides balanced structures for efficient updates and searches, maintaining O(log n) performance.
 
 #### **Min-Heap**
 
-- **Purpose:**  
-  The **Min-Heap** is a complete binary tree that maintains the heap property, where the parent node is always less than or equal to its children. This structure is particularly useful for prioritizing elements based on specific criteria, such as urgency or priority.
-
-- **Usage in the App:**  
-  In the **MunicipalServicesApp**, the Min-Heap is employed to manage service requests based on their priority. For example, requests with higher urgency or those submitted earlier may be given higher priority for resolution. When a service request is added to the heap, the system can efficiently access the highest priority request.
-
-- **Benefits:**
-  - **Priority Management:** The Min-Heap allows for O(log n) time complexity for both insertions and extractions, ensuring that the application can efficiently manage and prioritize service requests with varying levels of urgency. This ensures timely processing of critical service requests, which is essential for efficient municipal service management.
-  - **Quick Access to Minimum Element:** By maintaining the heap property, the Min-Heap enables fast retrieval of the request with the highest priority (i.e., the smallest element), improving the responsiveness of the application when handling urgent requests.
-
----
+- **Purpose:** A binary tree that prioritizes elements based on specific criteria, like urgency.
+- **Usage:** Manages service requests based on their priority. The system can quickly access the highest-priority request.
+- **Benefits:** Enables quick retrieval and processing of high-priority requests.
 
 #### **Graph**
 
-- **Purpose:**  
-  The **Graph** data structure is used to represent relationships and dependencies between service requests. It models complex relationships where one service request may affect or depend on the completion of another, helping to understand how tasks or requests are interconnected.
-
-- **Usage in the App:**  
-  In the **MunicipalServicesApp**, the graph is used to represent `ServiceRequest` instances as nodes, with edges denoting dependencies between them. For instance, one request (e.g., repairing a water pipe) may depend on another (e.g., excavation work), and the graph helps track these relationships to ensure the correct order of service delivery.
-
-- **Benefits:**
-  - **Flexible Relationship Management:** The graph supports operations like traversals (e.g., Breadth-First Search or Depth-First Search) and pathfinding, which are useful for understanding how service requests interact with each other. This is essential when managing large, interconnected systems, such as municipal infrastructure.
-  - **Support for Algorithms:** The graph structure enables the use of algorithms like **Prim's Minimum Spanning Tree (MST)** to compute the most efficient way to address interconnected service requests. This can optimize resource allocation and scheduling, ensuring that the most critical requests are resolved first and that dependencies are handled in the correct order.
-
----
+- **Purpose:** Models relationships and dependencies between service requests.
+- **Usage:** Represents `ServiceRequest` instances as nodes, with edges showing dependencies between tasks (e.g., one service request depends on the completion of another).
+- **Benefits:** Supports operations like graph traversal and pathfinding to optimize service request handling.
 
 #### **Priority Queue**
 
-- **Purpose:**  
-  The **Priority Queue** is a specialized data structure that allows for the processing of elements based on their priority rather than their insertion order. It is particularly useful in scenarios where dynamic selection of elements is required, such as in graph algorithms or task scheduling.
+- **Purpose:** A specialized data structure that processes elements based on their priority rather than their insertion order.
+- **Usage:** Used during tasks like **Prim’s MST algorithm** to manage edges in a graph based on urgency or resource requirements.
+- **Benefits:** Efficiently processes the most critical elements first, ensuring timely resolution of service requests.
 
-- **Usage in the App:**  
-  In the context of the **MunicipalServicesApp**, the **Priority Queue** is utilized during the execution of **Prim's MST algorithm** to manage edges in a graph based on their weights or costs (e.g., urgency, resources required). The priority queue helps select the most critical service request dependencies, ensuring that the application processes the most important tasks first.
+------------
 
-- **Benefits:**
-  - **Efficient Edge Selection:** The Priority Queue ensures that edges are processed in the correct order by maintaining O(log n) time complexity for both insertions and removals. This is crucial for algorithms that involve dynamically changing data, such as MST, where the edges' priorities (or costs) may change during execution.
-  - **Dynamic Management:** The priority queue enables the application to adapt to changing conditions, such as varying service request priorities. For example, if a new, more urgent request is submitted, the priority queue ensures it is handled promptly without disrupting the entire process.
+## Conclusion
 
----
+The **MunicipalServicesApp** integrates advanced data structures—**AVL Trees, Red-Black Trees, Min-Heaps, Graphs,** and **Priority Queues**—to optimize the management of service requests. These structures ensure efficient data handling, priority-based management, and effective scheduling of service tasks. The combination of these structures allows the app to efficiently manage large volumes of service requests, respond promptly to urgent issues, and handle interdependencies between requests.
 
-### **Conclusion**
-
-The **MunicipalServicesApp** integrates a combination of advanced data structures—**AVL Trees, Red-Black Trees, Min-Heaps, Graphs,** and **Priority Queues**—to create a robust and efficient framework for managing service requests. Each data structure was selected based on its strengths in handling specific operations like sorting, prioritizing, and managing complex relationships. The AVL and Red-Black trees ensure efficient search and update operations, while the Min-Heap and Priority Queue enable responsive, priority-driven service request management. The graph provides a flexible and scalable solution for modeling dependencies and optimizing service resolution paths.
-
-By utilizing these data structures, the application can handle a large volume of service requests, respond promptly to critical issues, and ensure that all dependencies are managed efficiently. This framework also lays the groundwork for future scalability, ensuring that the system can grow to meet the increasing demands of municipal service management.
+By using these data structures, the **MunicipalServicesApp** provides a scalable and responsive system for managing municipal service requests, which can grow to meet the needs of increasingly complex service environments.
 
